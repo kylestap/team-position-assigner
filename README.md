@@ -25,6 +25,7 @@ Team Position Assigner
 🧪 Running the App Locally
 
   ✅ Clone the repository:
+  
     bash
     Copy
     Edit
@@ -32,6 +33,7 @@ Team Position Assigner
     cd your-repo-name
     
   ✅ Create a virtual environment and activate it:
+  
     bash
     Copy
     Edit
@@ -39,12 +41,14 @@ Team Position Assigner
     source venv/bin/activate (On Windows: venv\Scripts\activate)
     
   ✅ Install dependencies:
+  
     bash
     Copy
     Edit
     pip install -r requirements.txt
     
   ✅ Run the app:
+  
     bash
     Copy
     Edit
@@ -58,6 +62,7 @@ Team Position Assigner
 ☁️ Uploading files to GitHub
 
   ✅ Navigate to your project directory (if you’re not already there):
+  
     bash
     Copy
     Edit
@@ -79,12 +84,14 @@ Team Position Assigner
     Press CTRL + X to exit
 
 ✅ Stage the README file for commit:
+
     bash
     Copy
     Edit
     git add README.md
 
 ✅ Commit the change:
+
     bash
     Copy
     Edit
