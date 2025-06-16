@@ -138,12 +138,12 @@ Copy
 Edit
 team-position-assigner/
 │
-├── app.py              # Flask application with routing and logic
-├── team.db             # SQLite database file
-├── requirements.txt    # Dependencies for Flask & Gunicorn
-├── Procfile            # Required by Render for deployment
-├── venv/               # Virtual environment (ignored in Git)
-└── __pycache__/        # Python cache files
+├── app.py           # Main Flask app with routes and logic
+├── team.db          # SQLite database file
+├── requirements.txt # Required Python packages (Flask, Gunicorn)
+├── Procfile         # Tells Render how to run the app
+├── venv/            # Virtual environment (should be Git-ignored)
+└── __pycache__/     # Python cache files
 
 🔧 Future Improvements and Features
 
