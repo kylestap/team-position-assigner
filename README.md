@@ -103,15 +103,34 @@ Team Position Assigner
     Edit
     git push
 
-⚠️ Troubleshooting & Roadblocks
-            Problem	                                            Cause	                                                          Solution
-404 Errors for /add and /roster	                    Missing route functions in app.py	                              Re-added the @app.route('/add') and @app.route('/roster') views
-gunicorn: command not found on Render	              gunicorn not listed in requirements.txt	                        Added gunicorn to requirements.txt
-Empty field positions after assignment	            Some positions weren’t filled due to preference conflicts	      Modified logic to shuffle and retry until all positions were filled with gender rules met
-Missing players table	                              SQLite database wasn’t initialized	                            Ensured init_db() runs at the start of app.py
-Flask app failed to bind port on Render	            Default Flask uses localhost	                                  Render expects 0.0.0.0, but this is handled automatically by Gunicorn
-Login issues when pushing to GitHub from terminal	  Git tried to use wrong browser (Edge)	                          Used Chrome to authenticate via token login or used GitHub CLI
-Failed test_position_uniqueness unit test	          Player preferences had duplicate values	                        Updated test to generate unique position preferences
+⚠️ Troubleshooting and Roadblocks
+Problem: 404 Errors for /add and /roster
+Cause: Route functions were missing in app.py
+Solution: Re-added the @app.route('/add') and @app.route('/roster') functions
+
+Problem: gunicorn: command not found on Render
+Cause: gunicorn was not listed in requirements.txt
+Solution: Added gunicorn to requirements.txt
+
+Problem: Some field positions were left unfilled
+Cause: Conflicts in player position preferences
+Solution: Implemented logic to shuffle and retry the assignment up to 50 times until all positions were filled, while still meeting gender rules
+
+Problem: Missing players table in database
+Cause: SQLite database was not initialized
+Solution: Ensured init_db() runs when the app starts
+
+Problem: App failed to bind port on Render
+Cause: Flask defaulted to localhost
+Solution: Handled via Gunicorn which binds to 0.0.0.0 automatically
+
+Problem: GitHub login issues from terminal
+Cause: Git tried to open authentication in Microsoft Edge
+Solution: Used Chrome to authenticate with a token or used GitHub CLI
+
+Problem: Unit test failure for test_position_uniqueness
+Cause: Duplicate preferred positions in test player
+Solution: Updated test to generate truly unique position preferences
 
 📁 Project Structure
 bash
